@@ -1,0 +1,42 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name ="viewport" content="width-device-width,initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<style>
+    .content{
+		text-align: center;
+		margin-top: 70px;
+		padding: 20px;
+	}
+	.content h1{
+		font-size: 130px;
+		color:white;
+		font-weight: 600;
+		transition: 0.5s;
+	}
+</style>
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'predictor' %}">Predictor</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <button class="btnLogin-popup"><a href="{% url 'login' %}">Login</button>
+        </nav>
+    </header>
+    <div class="content">  
+        <h1>Welcome to<br>
+            T20 Cricket Predictor</h1>
+    </div>
+
+</body>
+</html>
+
